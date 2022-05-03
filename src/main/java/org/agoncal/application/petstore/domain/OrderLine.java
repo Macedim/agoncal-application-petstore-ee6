@@ -1,5 +1,8 @@
 package org.agoncal.application.petstore.domain;
 
+import lombok.AccessLevel;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 /**
@@ -9,6 +12,7 @@ import javax.persistence.*;
  */
 
 @Entity
+@Setter
 public class OrderLine {
 
     // ======================================
@@ -17,6 +21,7 @@ public class OrderLine {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Setter(AccessLevel.NONE)
     private Long id;
     @Column(nullable = false)
     private Integer quantity;
@@ -56,17 +61,13 @@ public class OrderLine {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
+
 
     public Item getItem() {
         return item;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
-    }
+
 
     // ======================================
     // =   Methods hash, equals, toString   =

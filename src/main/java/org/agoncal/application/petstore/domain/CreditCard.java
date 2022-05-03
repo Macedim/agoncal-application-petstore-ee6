@@ -1,5 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.EnumType;
@@ -14,6 +16,7 @@ import javax.validation.constraints.Size;
  */
 
 @Embeddable
+@Setter
 public class CreditCard {
 
     // ======================================
@@ -54,25 +57,18 @@ public class CreditCard {
         return creditCardNumber;
     }
 
-    public void setCreditCardNumber(String creditCardNumber) {
-        this.creditCardNumber = creditCardNumber;
-    }
 
     public CreditCardType getCreditCardType() {
         return creditCardType;
     }
 
-    public void setCreditCardType(CreditCardType creditCardType) {
-        this.creditCardType = creditCardType;
-    }
+
 
     public String getCreditCardExpDate() {
         return creditCardExpDate;
     }
 
-    public void setCreditCardExpDate(String creditCardExpDate) {
-        this.creditCardExpDate = creditCardExpDate;
-    }
+
 
     // ======================================
     // =   Methods hash, equals, toString   =

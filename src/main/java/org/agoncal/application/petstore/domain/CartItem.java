@@ -1,5 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
+import lombok.Setter;
+
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
@@ -8,7 +10,7 @@ import javax.validation.constraints.NotNull;
  *         http://www.antoniogoncalves.org
  *         --
  */
-
+@Setter
 public class CartItem {
 
     // ======================================
@@ -46,17 +48,12 @@ public class CartItem {
         return item;
     }
 
-    public void setItem(Item item) {
-        this.item = item;
-    }
+
 
     public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
-    }
 
     // ======================================
     // =   Methods hash, equals, toString   =
