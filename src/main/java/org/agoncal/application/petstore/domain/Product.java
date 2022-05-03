@@ -1,6 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -26,6 +27,7 @@ import java.util.List;
 })
 @XmlRootElement
 @Setter
+@Getter
 public class Product {
 
     // ======================================
@@ -71,31 +73,6 @@ public class Product {
         this.category = category;
     }
 
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
-
-    public String getDescription() {
-        return description;
-    }
-
-
-
-    public Category getCategory() {
-        return category;
-    }
-
-
 
     public void addItem(Item item) {
         if (items == null)
@@ -103,9 +80,7 @@ public class Product {
         items.add(item);
     }
 
-    public List<Item> getItems() {
-        return items;
-    }
+
 
 
 

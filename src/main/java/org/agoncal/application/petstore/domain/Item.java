@@ -1,6 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.Setter;
 import org.agoncal.application.petstore.constraint.NotEmpty;
 import org.agoncal.application.petstore.constraint.Price;
@@ -25,6 +26,7 @@ import javax.xml.bind.annotation.XmlTransient;
 })
 @XmlRootElement
 @Setter
+@Getter
 public class Item {
 
     // ======================================
@@ -74,41 +76,6 @@ public class Item {
         this.description = description;
     }
 
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-
-
-    public Float getUnitCost() {
-        return unitCost;
-    }
-
-
-
-    public String getImagePath() {
-        return imagePath;
-    }
-
-
-
-    public Product getProduct() {
-        return product;
-    }
-
-
-
-    public String getDescription() {
-        return description;
-    }
 
 
 

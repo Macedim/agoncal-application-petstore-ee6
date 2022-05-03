@@ -1,6 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import javax.persistence.*;
 
 @Entity
 @Setter
+@Getter
 public class OrderLine {
 
     // ======================================
@@ -48,25 +50,6 @@ public class OrderLine {
     public Float getSubTotal() {
         return item.getUnitCost() * quantity;
     }
-
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Long getId() {
-        return id;
-    }
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-
-
-    public Item getItem() {
-        return item;
-    }
-
 
 
     // ======================================

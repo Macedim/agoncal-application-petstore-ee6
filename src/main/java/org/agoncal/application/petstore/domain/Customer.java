@@ -1,6 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.Setter;
 import org.agoncal.application.petstore.constraint.Email;
 import org.agoncal.application.petstore.constraint.Login;
@@ -30,6 +31,7 @@ import java.util.GregorianCalendar;
 })
 @XmlRootElement
 @Setter
+@Getter
 public class Customer implements Serializable {
 
     // ======================================
@@ -140,65 +142,6 @@ public class Customer implements Serializable {
             throw new ValidationException("Passwords don't match");
     }
 
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getLogin() {
-        return login;
-    }
-
-
-    public String getPassword() {
-        return password;
-    }
-
-
-
-    public String getFirstname() {
-        return firstname;
-    }
-
-
-
-    public String getLastname() {
-        return lastname;
-    }
-
-
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-
-
-    public String getEmail() {
-        return email;
-    }
-
-
-
-
-    public Address getHomeAddress() {
-        return homeAddress;
-    }
-
-
-
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
-
-
-
-    public Integer getAge() {
-        return age;
-    }
 
     // ======================================
     // =   Methods hash, equals, toString   =

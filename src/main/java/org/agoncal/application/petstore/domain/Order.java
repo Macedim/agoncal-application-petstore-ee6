@@ -1,6 +1,7 @@
 package org.agoncal.application.petstore.domain;
 
 import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -21,6 +22,7 @@ import java.util.List;
         @NamedQuery(name = Order.FIND_ALL, query = "SELECT o FROM Order o")
 })
 @Setter
+@Getter
 public class Order {
 
     // ======================================
@@ -97,37 +99,6 @@ public class Order {
     // ======================================
     // =         Getters & setters          =
     // ======================================
-
-    public Long getId() {
-        return id;
-    }
-
-    public Date getOrderDate() {
-        return orderDate;
-    }
-
-    public Customer getCustomer() {
-        return customer;
-    }
-
-
-
-    public List<OrderLine> getOrderLines() {
-        return orderLines;
-    }
-
-
-
-    public Address getDeliveryAddress() {
-        return deliveryAddress;
-    }
-
-
-
-    public CreditCard getCreditCard() {
-        return creditCard;
-    }
-
 
 
     public String getCreditCardNumber() {

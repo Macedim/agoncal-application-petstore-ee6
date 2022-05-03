@@ -1,5 +1,6 @@
 package org.agoncal.application.petstore.domain;
 
+import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.Min;
@@ -11,6 +12,7 @@ import javax.validation.constraints.NotNull;
  *         --
  */
 @Setter
+@Getter
 public class CartItem {
 
     // ======================================
@@ -39,21 +41,6 @@ public class CartItem {
     public Float getSubTotal() {
         return item.getUnitCost() * quantity;
     }
-
-    // ======================================
-    // =         Getters & setters          =
-    // ======================================
-
-    public Item getItem() {
-        return item;
-    }
-
-
-
-    public Integer getQuantity() {
-        return quantity;
-    }
-
 
     // ======================================
     // =   Methods hash, equals, toString   =
